@@ -10,16 +10,34 @@ const db = require('../db');  // Import Sequelize database instance called "db"
 const Campus = db.define("campus", {
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true, //THIS WAS ADDED CODE
+    }
+  },
+  //THIS WAS ADDED TOO
+  imageUrl: {
+    type: Sequelize.STRING,
+    defaultValue: 'https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg',
+    validate: {
+      notEmpty:true,
+    }
   },
 
   address: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty:true,
+    }
   },
 
   description: {
     type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
   }
 });
 
