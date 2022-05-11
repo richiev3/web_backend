@@ -12,10 +12,10 @@ const Campus = db.define("campus", {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      notEmpty: true, //THIS WAS ADDED CODE
+      notEmpty: true, 
     }
   },
-  //THIS WAS ADDED TOO
+
   imageUrl: {
     type: Sequelize.STRING,
     defaultValue: 'https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg',
